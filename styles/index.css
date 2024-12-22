@@ -151,3 +151,43 @@ section {
 }
 
 /* FOOTER */
+
+footer {
+    background-color: var(--background-secondary);
+    color: var(--background-primary);
+    padding-top: 30px;
+}
+
+footer>h2 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.contact-info {
+    padding: 20px;
+}
+
+.contact-info>p {
+    margin: 10px 0;
+}
+
+.contact-info>p:first-child {
+    font-size: 1.2rem;
+}
+
+.contact-info>p:nth-child(2) {
+    margin: 20px 0;
+}
+
+footer>.website-links {
+    margin-bottom: 20px;
+}
+
+.footer-img {
+    width: 100%;
+}
+
+.footer-img img {
+    width: 100%;
+    vertical-align: middle;
+}
