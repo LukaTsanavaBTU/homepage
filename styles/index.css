@@ -23,6 +23,7 @@ body {
     z-index: -1;
     height: 60vh;
     width: 100vw;
+    max-width: 100%;
 }
 
 .header-background {
@@ -321,9 +322,10 @@ footer .website-links {
 
     .footer-wrapper .website-links img {
         width: 40px;
-        &:first-child {
-            margin-left: 0;
-        }
+    }
+
+    .footer-wrapper .website-links :first-child img {
+        margin-left: 0;
     }
 
     .footer-img {
@@ -337,4 +339,106 @@ footer .website-links {
         object-fit: cover;
     }
 
+}
+
+@media screen and (min-width: 1366px) {
+
+    /* HEADER */
+
+    .background-wrapper { 
+        height: 100vh;
+    }
+
+    .header-wrapper {
+        height: 100vh;
+        margin: 0 50px 50px 50px;
+    }
+
+    header {
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+    
+    .hero-img {
+        margin: 0;
+        max-width: 100%;
+        height: 90%;
+        scale: 100%;
+    }
+    
+    .hero-img h1 {
+        top: auto;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 5rem;
+    }
+
+    .about-me {
+        max-width: 40%;
+        margin: 0;
+    }
+
+    .about-me>h2 {
+        font-size: 3rem;
+        text-align: start;
+    }
+    
+    .about-me>p {
+        font-size: 1.4rem;
+    }
+    
+    .about-me .website-links {
+        text-align: end;
+        display: block;
+    }
+    
+    .website-links img {
+        width: 50px;
+    }
+
+    /* MAIN */
+
+    section {
+        max-width: 30%;
+    }
+
+    /* FOOTER */
+
+    footer {
+        align-items: start;
+    }
+
+    .footer-wrapper {
+        padding-right: 50px;
+    }
+
+    .contact-info > p:first-child,
+    .contact-info > p {
+        font-size: 1.5rem;
+    }
+
+    .contact-info img {
+        width: 40px;
+    }
+
+    .footer-wrapper .website-links img {
+        width: 50px;
+        margin-left: 20px;
+    }
+
+    .footer-img {
+        max-width: 50%;
+    }
+
+}
+
+@media screen and (min-width: 1600px) {
+    .about-me>p {
+        font-size: 1.8rem;
+    }
 }
