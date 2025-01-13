@@ -1,22 +1,26 @@
 :root {
-    --primary: #060b04;
-    --background-primary: #ffffff;
-    --background-secondary: #0891b2;
-    --text-light: #5b5855;
+    --primary: #EEEEEE;
+    --background-primary: #222831;
+    --background-secondary: #393E46;
+    --accent: #00aab3;
+    --text-light: #b5c9ca;
     --font-stack: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-family: var(--font-stack);
+    color: var(--primary);
+    font-weight: 300;
 }
 
 body {
     margin: 0;
     padding: 0;
     box-sizing: content-box;
+    background-color: var(--background-primary);
 }
 
 /* HEADER */
 
 .background-wrapper {
-    filter: drop-shadow(0px 5px 5px #00000050);
+    /* filter: drop-shadow(0px 5px 5px #00000050); */
     position: absolute;
     top: 0;
     left: 0;
@@ -28,7 +32,7 @@ body {
 
 .header-background {
     clip-path: polygon(0 0, 100% 0, 100% 60%, 0% 100%);
-    background-color: var(--background-secondary);
+    background-color: var(--accent);
     height: 100%;
     width: 100%;    
 }
@@ -43,15 +47,17 @@ header {
 
 .hero-img {
     position: relative;
-    box-shadow: 0px 5px 5px #00000050;
+    /* box-shadow: 0px 5px 5px #00000050; */
     margin: 0 25px;
     max-width: 400px;
+    border-radius: 20px;
 }
 
 .hero-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 20px;
 }
 
 .hero-img h1 {
@@ -60,15 +66,17 @@ header {
     left: 0;
     right: 0;
     text-align: center;
-    color: var(--background-primary);
-    text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+    color: var(--primary);
+    /* text-shadow: 2px 2px 2px rgba(0,0,0,0.5); */
     font-size: 3.5rem;
     margin: 0 15px;
+    font-weight: 500;
 }
 
 .about-me {
     margin: 30px 20px;
     max-width: 500px;
+    border-radius: 20px;
 }
 
 .about-me>h2 {
@@ -91,6 +99,7 @@ header {
 .website-links img {
     width: 30px;
     margin-left: 10px;
+    filter: invert(100%);
 }
 
 /* MAIN */
@@ -107,26 +116,38 @@ main>h2 {
 .projects-wrapper {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px;
+    grid-auto-rows: 1fr;
+    row-gap: 40px;
+    column-gap: 20px;
 }
 
 section {
-    box-shadow: 0px 5px 5px #00000050;
-    margin: 30px 0;
+    /* box-shadow: 0px 5px 5px #00000050; */
+    background-color: var(--background-secondary);
+    border-radius: 20px;
+    transition: transform 0.5s;
+    display: flex;
+    flex-direction: column;
+}
+
+section:hover {
+    transform: scale(103%);
 }
 
 .project-img {
     height: 70%;
+    padding: 5px;
 }
 
 .project-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 20px 20px 0 0;
 }
 
 .project-info {
-    padding: 20px 20px 15% 20px;
+    padding: 20px;
 }
 
 .project-info>div {
@@ -146,12 +167,13 @@ section {
 
 .project-info p {
     color: var(--text-light);
+    font-size: 1.2rem;
 }
 
 /* FOOTER */
 
 footer {
-    background-color: var(--background-secondary);
+    background-color: var(--accent);
     color: var(--background-primary);
     padding-top: 30px;
 }
@@ -179,10 +201,15 @@ footer h2 {
 
 .contact-info img {
     display: none;
+    filter: invert(0%);
 }
 
 footer .website-links {
     margin-bottom: 20px;
+}
+
+footer .website-links img {
+    filter: invert(0%);
 }
 
 .footer-img {
@@ -236,8 +263,8 @@ footer .website-links {
     }
 
     .about-me {
-        background-color: var(--background-primary);
-        box-shadow: 0px 5px 5px #00000050;
+        background-color: var(--background-secondary);
+        /* box-shadow: 0px 5px 5px #00000050; */
         max-width: 700px;
         margin: 0;
         padding: 40px 30px 30px 30px;
@@ -311,7 +338,6 @@ footer .website-links {
     .contact-info img {
         width: 30px;
         display: inline;
-        filter: invert(100%);
         vertical-align: middle;
         margin-right: 5px;
     }
@@ -338,6 +364,7 @@ footer .website-links {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        border-radius: 10px;
     }
 
 }
@@ -382,6 +409,7 @@ footer .website-links {
     .about-me {
         max-width: 40%;
         margin: 0;
+        border-radius: 0 20px 20px 0;
     }
 
     .about-me>h2 {
