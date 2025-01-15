@@ -171,6 +171,14 @@ section:hover {
     font-size: 1.2rem;
 }
 
+.project-info p a {
+    color: var(--accent);
+}
+
+.project-info p a:visited {
+    color: #00676d
+}
+
 /* FOOTER */
 
 footer {
